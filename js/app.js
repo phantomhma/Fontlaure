@@ -351,6 +351,40 @@ function computeStats(range) {
   return { revenue, byItem };
 }
 
+function renderCustomerStats() {
+  const byBuyer = new Map();
+  for (const s of data.sales) {
+    if (s.deleted || !s.buyer) continue;
+    const e = byBuyer.get(s.buyer) || { count: 0, revenue: 0, dates: [] };
+    e.count += 1;
+    e.revenue += s.quantity * s.unitPrice;
+    e.dates.push(s.date);
+    byBuyer.set(s.buyer, e);
+  }
+  const rows = [...byBuyer.entries()]
+    .map(([name, e]) => {
+      const dates = [...e.dates].sort();
+      const last = dates[dates.length - 1];
+      let frequence = '–';
+      if (dates.length >= 2) {
+        const spanDays = (new Date(dates[dates.length - 1]) - new Date(dates[0])) / 86400000;
+        frequence = `tous les ${Math.round(spanDays / (dates.length - 1))} j`;
+      }
+      return { name, ...e, last, frequence };
+    })
+    .sort((a, b) => b.revenue - a.revenue)
+    .map(
+      (c) => `<li>
+        <div class="entry-main">
+          <strong>${c.name}</strong>
+          <span>${c.count} achat(s) · ${c.revenue.toFixed(2)} € · dernier le ${c.last} · récurrence ${c.frequence}</span>
+        </div>
+      </li>`
+    )
+    .join('');
+  $('#customer-stats').innerHTML = `<ul class="entry-list">${rows || '<li class="empty">Aucune vente avec acheteur renseigné.</li>'}</ul>`;
+}
+
 function renderDashboard() {
   const range = getPeriodRange(currentPeriod, periodOffset);
   $('#period-label').textContent = range.label;
@@ -408,6 +442,7 @@ function renderAll() {
   renderHarvestList();
   renderSaleList();
   renderDashboard();
+  renderCustomerStats();
 }
 
 renderCategorySelect();
