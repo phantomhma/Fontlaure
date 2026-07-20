@@ -265,7 +265,10 @@ $('#sync-now').addEventListener('click', async () => {
         renderAll();
         break;
       } catch (err) {
-        if (err.status === 409 && attempt < MAX_ATTEMPTS) continue; // sha périmé, on relit et réessaie
+        if (err.status === 409 && attempt < MAX_ATTEMPTS) {
+          await new Promise((r) => setTimeout(r, 500 * attempt)); // laisse GitHub se stabiliser avant de relire le sha
+          continue;
+        }
         throw err;
       }
     }
@@ -402,4 +405,12 @@ renderAll();
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('./sw.js').catch(() => {});
+  // Recharge une fois quand un nouveau SW prend le contrôle, pour éviter
+  // qu'une PWA déjà ouverte continue de tourner sur un JS périmé.
+  let reloaded = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (reloaded) return;
+    reloaded = true;
+    window.location.reload();
+  });
 }
