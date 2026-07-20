@@ -78,12 +78,15 @@ function mergeCollection(local, remote) {
 }
 
 function mergeData(local, remote) {
+  const localTs = local.meta?.contributorsUpdatedAt || '';
+  const remoteTs = (remote.meta && remote.meta.contributorsUpdatedAt) || '';
+  const contributors = remoteTs > localTs && remote.contributors?.length ? remote.contributors : local.contributors;
   return {
     items: mergeCollection(local.items, remote.items || []),
     harvests: mergeCollection(local.harvests, remote.harvests || []),
     sales: mergeCollection(local.sales, remote.sales || []),
-    contributors: remote.contributors && remote.contributors.length ? remote.contributors : local.contributors,
-    meta: { lastSync: now() },
+    contributors,
+    meta: { lastSync: now(), contributorsUpdatedAt: remoteTs > localTs ? remoteTs : localTs },
   };
 }
 

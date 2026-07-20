@@ -192,6 +192,7 @@ $('#sale-list').addEventListener('click', (e) => {
 // ---------- Réglages ----------
 $('#save-contributors').addEventListener('click', () => {
   data.contributors = [$('#contrib-1').value.trim() || 'Contributeur 1', $('#contrib-2').value.trim() || 'Contributeur 2'];
+  data.meta = { ...data.meta, contributorsUpdatedAt: store.now() };
   store.save(data);
   renderAll();
 });
