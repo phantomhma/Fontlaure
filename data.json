@@ -1,13 +1,32 @@
 {
-  "items": [],
-  "harvests": [],
+  "items": [
+    {
+      "id": "82cb2565-a327-4d67-9f92-b73072f59509",
+      "name": "Aubergines longues",
+      "category": "legume",
+      "unit": "kg",
+      "price": 3,
+      "updatedAt": "2026-07-20T16:13:36.270Z"
+    }
+  ],
+  "harvests": [
+    {
+      "id": "34dde5d2-71cb-45d8-b7ec-be379bd0ade8",
+      "itemId": "82cb2565-a327-4d67-9f92-b73072f59509",
+      "quantity": 3,
+      "date": "2026-07-20",
+      "contributor": "Emmanuelle",
+      "note": "",
+      "updatedAt": "2026-07-20T16:14:22.008Z"
+    }
+  ],
   "sales": [],
   "contributors": [
     "Emmanuelle",
     "Joseph"
   ],
   "meta": {
-    "lastSync": "2026-07-20T16:14:03.154Z",
+    "lastSync": "2026-07-20T16:14:38.694Z",
     "contributorsUpdatedAt": "2026-07-20T16:05:52.777Z"
   }
 }
