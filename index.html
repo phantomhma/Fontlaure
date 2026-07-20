@@ -67,9 +67,11 @@
         <label>Quantité
           <input id="sale-qty" type="number" step="0.01" min="0" required />
         </label>
-        <label>Prix unitaire (€)
-          <input id="sale-price" type="number" step="0.01" min="0" required />
-        </label>
+        <div class="sale-info">
+          <span>Prix : <strong id="sale-price-display">–</strong></span>
+          <span>Stock dispo : <strong id="sale-stock-display">–</strong></span>
+        </div>
+        <input id="sale-price" type="hidden" />
         <label>Date
           <input id="sale-date" type="date" required />
         </label>

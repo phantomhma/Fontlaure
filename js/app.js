@@ -30,6 +30,7 @@ function renderItemSelects() {
     .join('');
   $('#harvest-item').innerHTML = options;
   $('#sale-item').innerHTML = options;
+  updateSaleInfo();
 }
 
 function renderContributorSelects() {
@@ -160,17 +161,28 @@ function renderSaleList() {
     .join('') || '<li class="empty">Aucune vente.</li>';
 }
 
-$('#sale-item').addEventListener('change', () => {
+function updateSaleInfo() {
   const item = store.itemById(data, $('#sale-item').value);
-  if (item) $('#sale-price').value = item.price;
-});
+  if (!item) return;
+  $('#sale-price').value = item.price;
+  $('#sale-price-display').textContent = `${item.price.toFixed(2)} €/${item.unit}`;
+  $('#sale-stock-display').textContent = `${store.stockFor(data, item.id).toFixed(2)} ${item.unit}`;
+}
+$('#sale-item').addEventListener('change', updateSaleInfo);
 
 $('#form-sale').addEventListener('submit', (e) => {
   e.preventDefault();
+  const itemId = $('#sale-item').value;
+  const quantity = parseFloat($('#sale-qty').value);
+  const stock = store.stockFor(data, itemId);
+  if (quantity > stock) {
+    alert(`Stock insuffisant : ${stock.toFixed(2)} disponible(s).`);
+    return;
+  }
   store.upsert(data, 'sales', {
     id: store.newId(),
-    itemId: $('#sale-item').value,
-    quantity: parseFloat($('#sale-qty').value),
+    itemId,
+    quantity,
     unitPrice: parseFloat($('#sale-price').value),
     date: $('#sale-date').value,
     contributor: $('#sale-contributor').value,
