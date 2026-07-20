@@ -1,4 +1,4 @@
-const CACHE = 'potager-fontlaure-v1';
+const CACHE = 'potager-fontlaure-v2';
 const ASSETS = [
   './',
   './index.html',
