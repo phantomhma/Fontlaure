@@ -2,6 +2,11 @@
   "items": [],
   "harvests": [],
   "sales": [],
-  "contributors": ["Contributeur 1", "Contributeur 2"],
-  "meta": { "lastSync": null }
+  "contributors": [
+    "Contributeur 1",
+    "Contributeur 2"
+  ],
+  "meta": {
+    "lastSync": "2026-07-20T15:54:06.575Z"
+  }
 }
