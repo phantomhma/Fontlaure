@@ -240,22 +240,39 @@ $('#save-sync-settings').addEventListener('click', () => {
   setSyncStatus('Réglages enregistrés.');
 });
 
+let syncing = false;
+
 $('#sync-now').addEventListener('click', async () => {
+  if (syncing) return; // évite deux synchros en parallèle (cause du 409 : sha périmé entre-temps)
   const settings = sync.loadSettings();
   if (!settings.pat || !settings.owner || !settings.repo) {
     setSyncStatus('Renseigne PAT, owner et repo avant de synchroniser.', true);
     return;
   }
+  syncing = true;
+  $('#sync-now').disabled = true;
   setSyncStatus('Synchronisation en cours...');
+  const MAX_ATTEMPTS = 3;
   try {
-    const { data: remote, sha } = await sync.fetchRemote(settings);
-    data = remote ? store.mergeData(data, remote) : { ...data, meta: { lastSync: store.now() } };
-    store.save(data);
-    await sync.pushRemote(settings, data, sha);
-    setSyncStatus(`Synchronisé à ${new Date().toLocaleTimeString('fr-FR')}.`);
-    renderAll();
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      const { data: remote, sha } = await sync.fetchRemote(settings);
+      data = remote ? store.mergeData(data, remote) : { ...data, meta: { lastSync: store.now() } };
+      store.save(data);
+      try {
+        await sync.pushRemote(settings, data, sha);
+        setSyncStatus(`Synchronisé à ${new Date().toLocaleTimeString('fr-FR')}.`);
+        renderAll();
+        break;
+      } catch (err) {
+        if (err.status === 409 && attempt < MAX_ATTEMPTS) continue; // sha périmé, on relit et réessaie
+        throw err;
+      }
+    }
   } catch (err) {
     setSyncStatus(err.message, true);
+  } finally {
+    syncing = false;
+    $('#sync-now').disabled = false;
   }
 });
 

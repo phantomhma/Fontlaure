@@ -37,7 +37,11 @@ async function pushRemote(settings, data, sha) {
       ...(sha ? { sha } : {}),
     }),
   });
-  if (!res.ok) throw new Error(`Écriture GitHub échouée (${res.status})`);
+  if (!res.ok) {
+    const err = new Error(`Écriture GitHub échouée (${res.status})`);
+    err.status = res.status;
+    throw err;
+  }
 }
 
 export { loadSettings, saveSettings, fetchRemote, pushRemote };
