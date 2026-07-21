@@ -23,6 +23,22 @@
       "unit": "boîte",
       "price": 5,
       "updatedAt": "2026-07-21T06:58:58.144Z"
+    },
+    {
+      "id": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "name": "Tomates",
+      "category": "fruit",
+      "unit": "kg",
+      "price": 3,
+      "updatedAt": "2026-07-21T14:50:39.341Z"
+    },
+    {
+      "id": "fc6488c8-7747-49be-b4be-7211ca781a5a",
+      "name": "Courgettes longues",
+      "category": "legume",
+      "unit": "kg",
+      "price": 2,
+      "updatedAt": "2026-07-21T14:53:44.362Z"
     }
   ],
   "harvests": [
@@ -52,15 +68,133 @@
       "contributor": "Emmanuelle",
       "note": "",
       "updatedAt": "2026-07-21T06:56:41.300Z"
+    },
+    {
+      "id": "ae0f371f-06a3-44e1-8250-61049b4f9060",
+      "itemId": "f5a02af5-2774-45e4-ab1b-e89adeef0ac0",
+      "quantity": 14.5,
+      "date": "2026-07-21",
+      "contributor": "Joseph",
+      "note": "",
+      "updatedAt": "2026-07-21T14:51:20.659Z"
+    },
+    {
+      "id": "2c317fd4-2bd1-437d-9e64-efb37903a36c",
+      "itemId": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "quantity": 8,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "note": "",
+      "updatedAt": "2026-07-21T14:52:58.764Z"
+    },
+    {
+      "id": "6cce9c62-8143-4e2b-a92a-2e485d3c3d89",
+      "itemId": "fc6488c8-7747-49be-b4be-7211ca781a5a",
+      "quantity": 10,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "note": "",
+      "updatedAt": "2026-07-21T14:54:09.912Z"
     }
   ],
-  "sales": [],
+  "sales": [
+    {
+      "id": "ac8e412c-2e2f-481e-8eb5-a513a240bd72",
+      "itemId": "f5a02af5-2774-45e4-ab1b-e89adeef0ac0",
+      "quantity": 3,
+      "unitPrice": 5,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:51:32.119Z"
+    },
+    {
+      "id": "59a137fb-5463-4bae-a700-29652c2609df",
+      "itemId": "f5a02af5-2774-45e4-ab1b-e89adeef0ac0",
+      "quantity": 2,
+      "unitPrice": 5,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:51:38.731Z"
+    },
+    {
+      "id": "1a4b8ac0-39bc-4d3c-a78b-9d70ce96e4b9",
+      "itemId": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "quantity": 2,
+      "unitPrice": 3,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:53:07.038Z"
+    },
+    {
+      "id": "1e5a776e-0ca6-4884-82af-50349dce54c7",
+      "itemId": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "quantity": 1,
+      "unitPrice": 3,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:53:15.439Z"
+    },
+    {
+      "id": "8cb948a6-2545-47ae-a49e-1a6abea13e31",
+      "itemId": "fc6488c8-7747-49be-b4be-7211ca781a5a",
+      "quantity": 2,
+      "unitPrice": 2,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:54:18.278Z"
+    },
+    {
+      "id": "78d67f70-825a-40d5-9b73-50369c2d2733",
+      "itemId": "fc6488c8-7747-49be-b4be-7211ca781a5a",
+      "quantity": 1,
+      "unitPrice": 2,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:54:22.972Z"
+    },
+    {
+      "id": "9f7176a4-510a-4b1c-a662-d15de2eee15f",
+      "itemId": "82cb2565-a327-4d67-9f92-b73072f59509",
+      "quantity": 1,
+      "unitPrice": 3,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:55:28.362Z"
+    },
+    {
+      "id": "abd2fffd-6749-4783-b74c-efdfcd054421",
+      "itemId": "5d6fee91-46a3-4ac1-9547-9236da9045c7",
+      "quantity": 2,
+      "unitPrice": 2.5,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:56:05.870Z"
+    },
+    {
+      "id": "8d8d543e-d7ae-46cf-96f8-537a076a7192",
+      "itemId": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "quantity": 1,
+      "unitPrice": 3,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-21T14:56:21.725Z"
+    }
+  ],
   "contributors": [
     "Emmanuelle",
     "Joseph"
   ],
   "meta": {
-    "lastSync": "2026-07-21T07:01:35.106Z",
+    "lastSync": "2026-07-21T14:56:34.771Z",
     "contributorsUpdatedAt": "2026-07-20T16:05:52.777Z"
   }
 }
