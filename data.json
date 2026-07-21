@@ -7,6 +7,22 @@
       "unit": "kg",
       "price": 3,
       "updatedAt": "2026-07-20T16:13:36.270Z"
+    },
+    {
+      "id": "5d6fee91-46a3-4ac1-9547-9236da9045c7",
+      "name": "Courgettes rondes",
+      "category": "legume",
+      "unit": "kg",
+      "price": 2.5,
+      "updatedAt": "2026-07-21T06:55:35.518Z"
+    },
+    {
+      "id": "f5a02af5-2774-45e4-ab1b-e89adeef0ac0",
+      "name": "12 Œufs",
+      "category": "fruit",
+      "unit": "boîte",
+      "price": 5,
+      "updatedAt": "2026-07-21T06:58:58.144Z"
     }
   ],
   "harvests": [
@@ -18,6 +34,24 @@
       "contributor": "Emmanuelle",
       "note": "",
       "updatedAt": "2026-07-20T16:14:22.008Z"
+    },
+    {
+      "id": "5276e4de-6828-4f33-82e2-5319a1a2ebbb",
+      "itemId": "5d6fee91-46a3-4ac1-9547-9236da9045c7",
+      "quantity": 4,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "note": "",
+      "updatedAt": "2026-07-21T06:56:27.666Z"
+    },
+    {
+      "id": "efe493ac-0ade-4620-a4c1-6a177bdcd6ed",
+      "itemId": "5d6fee91-46a3-4ac1-9547-9236da9045c7",
+      "quantity": 4,
+      "date": "2026-07-21",
+      "contributor": "Emmanuelle",
+      "note": "",
+      "updatedAt": "2026-07-21T06:56:41.300Z"
     }
   ],
   "sales": [],
@@ -26,7 +60,7 @@
     "Joseph"
   ],
   "meta": {
-    "lastSync": "2026-07-21T06:55:05.855Z",
+    "lastSync": "2026-07-21T07:01:35.106Z",
     "contributorsUpdatedAt": "2026-07-20T16:05:52.777Z"
   }
 }
