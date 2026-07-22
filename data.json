@@ -39,6 +39,30 @@
       "unit": "kg",
       "price": 2,
       "updatedAt": "2026-07-21T14:53:44.362Z"
+    },
+    {
+      "id": "787e05b0-3e57-435e-8db1-521d4a332226",
+      "name": "Salade",
+      "category": "legume",
+      "unit": "pièce",
+      "price": 1,
+      "updatedAt": "2026-07-22T08:14:11.794Z"
+    },
+    {
+      "id": "a283391d-c3cd-48fa-b5ce-c825ee5e30cf",
+      "name": "Poivrons verts",
+      "category": "legume",
+      "unit": "kg",
+      "price": 3,
+      "updatedAt": "2026-07-22T08:14:59.477Z"
+    },
+    {
+      "id": "5cad6a3d-cf19-446b-a0c2-04d4de156e97",
+      "name": "Poivrons rouges",
+      "category": "legume",
+      "unit": "kg",
+      "price": 3,
+      "updatedAt": "2026-07-22T08:15:18.334Z"
     }
   ],
   "harvests": [
@@ -95,6 +119,24 @@
       "contributor": "Emmanuelle",
       "note": "",
       "updatedAt": "2026-07-21T14:54:09.912Z"
+    },
+    {
+      "id": "d4041667-e2ba-4954-8f23-60da1e716aaa",
+      "itemId": "787e05b0-3e57-435e-8db1-521d4a332226",
+      "quantity": 2,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "note": "",
+      "updatedAt": "2026-07-22T08:15:56.259Z"
+    },
+    {
+      "id": "17c18a43-0bef-4335-816a-d35a257da342",
+      "itemId": "a283391d-c3cd-48fa-b5ce-c825ee5e30cf",
+      "quantity": 1.5,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "note": "",
+      "updatedAt": "2026-07-22T08:17:03.995Z"
     }
   ],
   "sales": [
@@ -187,6 +229,116 @@
       "contributor": "Emmanuelle",
       "buyer": "",
       "updatedAt": "2026-07-21T14:56:21.725Z"
+    },
+    {
+      "id": "41808d82-91b8-4382-baa8-d30d681abd27",
+      "itemId": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "quantity": 1,
+      "unitPrice": 3,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:12:43.307Z"
+    },
+    {
+      "id": "4b0d28a9-616e-4a18-8d6f-3fa099fd027a",
+      "itemId": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "quantity": 1,
+      "unitPrice": 3,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:12:48.692Z"
+    },
+    {
+      "id": "9baf02c2-ed7c-4890-b5a8-19431a174851",
+      "itemId": "7b81e849-a439-43a5-897b-08a4104b19a1",
+      "quantity": 1,
+      "unitPrice": 3,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:12:53.323Z"
+    },
+    {
+      "id": "24102b45-d4d2-42e2-a5dd-6174f802e6b6",
+      "itemId": "fc6488c8-7747-49be-b4be-7211ca781a5a",
+      "quantity": 1,
+      "unitPrice": 2,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:12:59.628Z"
+    },
+    {
+      "id": "5f59e345-c995-4852-94c0-747576522a00",
+      "itemId": "fc6488c8-7747-49be-b4be-7211ca781a5a",
+      "quantity": 1,
+      "unitPrice": 2,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:13:06.468Z"
+    },
+    {
+      "id": "85eef656-63c2-4635-aee8-9219709b141a",
+      "itemId": "fc6488c8-7747-49be-b4be-7211ca781a5a",
+      "quantity": 1,
+      "unitPrice": 2,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:13:44.361Z"
+    },
+    {
+      "id": "2d4da2e0-ee20-4de9-94c9-07ca25dc7357",
+      "itemId": "787e05b0-3e57-435e-8db1-521d4a332226",
+      "quantity": 1,
+      "unitPrice": 1,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:16:18.029Z"
+    },
+    {
+      "id": "f75c50a0-7d3b-4bf8-9136-617dd65338cc",
+      "itemId": "787e05b0-3e57-435e-8db1-521d4a332226",
+      "quantity": 1,
+      "unitPrice": 1,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:16:25.864Z"
+    },
+    {
+      "id": "e25f9e97-bf39-402b-a26b-4d22b039d5ac",
+      "itemId": "f5a02af5-2774-45e4-ab1b-e89adeef0ac0",
+      "quantity": 1,
+      "unitPrice": 5,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:16:33.561Z"
+    },
+    {
+      "id": "9cb1e371-dccb-4ec3-9a21-c5b4743ff808",
+      "itemId": "a283391d-c3cd-48fa-b5ce-c825ee5e30cf",
+      "quantity": 1,
+      "unitPrice": 3,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:17:19.108Z"
+    },
+    {
+      "id": "5bcca3fb-8d04-4669-8438-f8d34265f1ef",
+      "itemId": "a283391d-c3cd-48fa-b5ce-c825ee5e30cf",
+      "quantity": 0.5,
+      "unitPrice": 3,
+      "date": "2026-07-22",
+      "contributor": "Emmanuelle",
+      "buyer": "",
+      "updatedAt": "2026-07-22T08:17:27.732Z"
     }
   ],
   "contributors": [
@@ -194,7 +346,7 @@
     "Joseph"
   ],
   "meta": {
-    "lastSync": "2026-07-21T14:56:34.771Z",
+    "lastSync": "2026-07-22T08:19:24.764Z",
     "contributorsUpdatedAt": "2026-07-20T16:05:52.777Z"
   }
 }
